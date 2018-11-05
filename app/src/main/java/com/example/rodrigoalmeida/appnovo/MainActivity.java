@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     private Button startBtn;
     private Button enabledBluetooth;
 
-
     //declaração para o bluetooth
     BluetoothAdapter myBluetooth = null;
     BluetoothDevice myDevice = null;
@@ -38,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static String MAC;
 
+    String cor = "abcdef";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick( View v){
 
+
                     if(myBluetooth.isEnabled()){
                         //metodo que confirma o status ddo app para verificar se o botao conectar ja foi clicado
 
@@ -90,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(), "Ligue seu bluetooth para começar! ", Toast.LENGTH_SHORT).show();
                     }
                     //chama a tela do jogo
+
                 }
         });
     }
